@@ -18,6 +18,8 @@ services:
       dockerfile: backend-django.Dockerfile
     container_name: backend-django
     hostname: backend-django
+    depends_on:
+      - database
     ports:
       - 8000:8000
     volumes:
