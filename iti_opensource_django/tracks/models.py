@@ -1,3 +1,13 @@
 from django.db import models
 
+
 # Create your models here.
+class Track(models.Model):
+    name = models.CharField(max_length=200)
+
+
+class Students(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    age = models.IntegerField()
+    track_id = models.ForeignKey(Track, on_delete=models.CASCADE)
