@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS itidb;
+
+CREATE DATABASE IF EXISTS itidb;
+
+USE itidb;
