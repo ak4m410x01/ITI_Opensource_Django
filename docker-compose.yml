@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  database:
+    build:
+      dockerfile: mysql-db.Dockerfile
+    container_name: mysql-db
+    hostname: mysql-db
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db:/usr/db
+    networks:
+      - server-side
+
+  backend:
+    build:
+      dockerfile: backend-django.Dockerfile
+    container_name: backend-django
+    hostname: backend-django
+    ports:
+      - 8000:8000
+    volumes:
+      - ./iti_opensource_django:/app
+    networks:
+      - server-side
+
+networks:
+  server-side:
