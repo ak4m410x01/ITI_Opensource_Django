@@ -25,7 +25,16 @@ class CustomStudent(admin.ModelAdmin):
     )
 
 
+class InlineStudent(admin.StackedInline):
+    model = Student
+    extra = 1
+
+
+class CustomTrack(admin.ModelAdmin):
+    inlines = [InlineStudent]
+
+
 # Register your models here.
 
-admin.site.register(Track)
+admin.site.register(Track, CustomTrack)
 admin.site.register(Student, CustomStudent)
