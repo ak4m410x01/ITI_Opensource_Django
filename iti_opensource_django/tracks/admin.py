@@ -24,6 +24,13 @@ class CustomStudent(admin.ModelAdmin):
         ],
     )
 
+    list_display = (
+        "first_name",
+        "last_name",
+        "age",
+        "track",
+    )
+
 
 class InlineStudent(admin.StackedInline):
     model = Student
