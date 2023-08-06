@@ -29,6 +29,7 @@ class CustomStudent(admin.ModelAdmin):
         "last_name",
         "age",
         "track",
+        "is_graduated",
     )
 
 
