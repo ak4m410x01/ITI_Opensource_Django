@@ -32,6 +32,15 @@ class CustomStudent(admin.ModelAdmin):
         "is_graduated",
     )
 
+    list_filter = [
+        "track",
+    ]
+
+    search_fields = [
+        "first_name",
+        "last_name",
+    ]
+
 
 class InlineStudent(admin.StackedInline):
     model = Student
