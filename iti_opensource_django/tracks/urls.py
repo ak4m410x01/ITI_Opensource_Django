@@ -7,4 +7,5 @@ urlpatterns = [
     path("home/", views.home, name="home"),
     path("student/all", views.getAllStudents, name="getAllStudents"),
     path("student/<int:id>", views.getStudent, name="getStudent"),
+    path("student/add", views.addStudent, name="addStudent"),
 ]

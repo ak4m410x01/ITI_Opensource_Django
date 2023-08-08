@@ -1,0 +1,9 @@
+<h1>Add New Student</h1>
+
+<form method="post">
+    {% csrf_token %}
+   
+    {{student.as_p}}
+    <button type="submit">Add</button>
+    <button type="reset">Reset</button>
+</form>
