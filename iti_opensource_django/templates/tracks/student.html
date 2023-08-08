@@ -1,0 +1,15 @@
+{% extends 'tracks/base.html' %}
+
+{% block title_block %}
+<h1>Student Details</h1>
+<b><a href="{% url 'tracks:getAllStudents' %}">Back <<< </a></b>
+
+{% endblock %}
+
+{% block main_block %}
+
+
+<p><b>Name:</b> {{ student.first_name }} {{ student.last_name }}</p>
+<p><b>Track:</b> {{ student.track }}</p>
+
+{% endblock %}
